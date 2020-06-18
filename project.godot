@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Galaxy-gen"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GalaxyNode="*res://galaxy_node.gd"
+Global="*res://global.gd"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
+window/size/resizable=false
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
