@@ -26,16 +26,16 @@ var arm_number = 0 # 0 if not in an arm
 
 var general_angle_shift = 0
 
-const NUMBER_OF_ARM = 3
+const NUMBER_OF_ARM = 5
 const SCALE = 10.0 # scale for the drawing
 #this is not the Node2D.scale
 const NUMBER_OF_LONER_PER_ARM = 10
 const NUMBER_OF_RANDOM_NODE = 10
 const NUMBER_OF_SYSTEM_PER_NODE = 2
 const MAX_ARM_DEPTH = 15
-const ARM_EXTENTION_SCALE = 6.0 * pow(MAX_ARM_DEPTH/15.0,2.0)
+const ARM_EXTENTION_SCALE = 4.0 * pow(MAX_ARM_DEPTH/15.0,2.0)
 const FINAL_ARM_ANGLE = 2.0 * PI
-const MAX_DIST_NODE = SCALE*2 # maximum distance between node in arm for interpolation
+const MAX_DIST_NODE = SCALE * 4.0 # maximum distance between node in arm for interpolation
 const NUMBER_OF_CORE_NODE = 30
 const CORE_RANGE = 8.0 # max distance to create core node in units of SCALE 
 
