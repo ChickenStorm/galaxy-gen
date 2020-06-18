@@ -63,7 +63,7 @@ func _ready():
 				node_loner.depth = 1
 				node_loner.galaxy_node = galaxy_node
 				var angle_random = Global.rng.randf_range(-PI / float(NUMBER_OF_ARM)*0.5,PI / float(NUMBER_OF_ARM)*0.5)
-				var angle_loner =  (i) * 2.0 * PI / NUMBER_OF_ARM + general_angle_shift + angle_random
+				var angle_loner =  (i+0.4) * 2.0 * PI / NUMBER_OF_ARM + general_angle_shift + angle_random
 				node_loner.position =  Vector2(cos(angle_loner),sin(angle_loner)) * Global.rng.randf_range(SCALE*pow(PI/2,3.0),SCALE*pow(PI,3.0))
 				# the scale is given by the eliptique equation 
 				# we choose a region where there is few system
@@ -154,7 +154,7 @@ func set_type(new_type):
 func _modulate_color():
 	match _type :
 		NODE_TYPE.ROOT, NODE_TYPE.CORE:
-			$ColorRect.set_modulate(Color(1.0,1.0,1.0))
+			$ColorRect.set_modulate(Color(1.0,0.0,1.0))
 		NODE_TYPE.ARM, NODE_TYPE.ARM_INTERPOLATE:
 			$ColorRect.set_modulate(Color(1.0,0,0))
 		NODE_TYPE.ARM_EXTENTION, NODE_TYPE.ARM_EXTENTION_INTERPOLATE,NODE_TYPE.ARM_EXTENTION_INTERPOLATE_ARM,NODE_TYPE.ARM_INTERPOLATE_EXTENTION:
@@ -164,5 +164,5 @@ func _modulate_color():
 		NODE_TYPE.LONER:
 			$ColorRect.set_modulate(Color(1.0,1.0,0))
 		NODE_TYPE.SYSTEM:
-			$ColorRect.set_modulate(Color(1.0,0,1.0))
+			$ColorRect.set_modulate(Color(1.0,1.0,1.0))
 	
